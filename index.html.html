@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+		}
+		.counting{
+		    margin: 0 auto;
+		    width: 290px;
+		    height: 370px;
+		    margin-top: 200px;
+		    background: rgb(19, 19, 19);
+	        border-radius: 10px;
+    		text-align: center;
+		}
+		.counting h3{
+			font-size: 25px;
+			font-weight: 400;
+			color: #929292;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 15px 0;
+		}
+		input{
+		    width: 50px;
+		    height: 50px;
+		    line-height: 40px;
+		    background: transparent;
+		    border: 2px solid #313131;
+		    color: #313131;
+		    font-size: 22px;
+		    margin-bottom: 4px;
+		}
+		input:focus{
+			border-color: #000;
+		}
+
+	</style>
+
+	<script type ="text/javascript">
+
+		function run1 () {
+			document.calculate.result.value+="1";
+		}
+		function run2 () {
+			document.calculate.result.value+="2";
+		}
+		function run3 () {
+			document.calculate.result.value+="3";
+		}
+		function run4 () {
+			document.calculate.result.value+="4";
+		}
+		function run5 () {
+			document.calculate.result.value+="5";
+		}
+		function run6 () {
+			document.calculate.result.value+="6";
+		}
+		function run7 () {
+			document.calculate.result.value+="7";
+		}
+		function run8 () {
+			document.calculate.result.value+="8";
+		}
+		function run9 () {
+			document.calculate.result.value+="9";
+		}
+		function run0 () {
+			document.calculate.result.value+="0";
+		}
+
+		function runclear () {
+			document.calculate.result.value="";
+		}
+		function equal () {
+			var finalresult=eval(document.calculate
+				.result.value);
+			document.calculate.result.value=finalresult;
+		}
+
+		function runplus () {
+			document.calculate.result.value+="+";
+		}
+		function runminus () {
+			document.calculate.result.value+="-";
+		}
+		function runmultiply () {
+			document.calculate.result.value+="*";
+		}
+		function runshare () {
+			document.calculate.result.value+="/";
+		}
+
+	</script>
+</head>
+<body>
+	<div class="counting">
+		<h3>Calculator</h3>
+		<form name="calculate">
+			<input name="result" style="width: 72%; margin-bottom: 15px;"/>
+			<br>
+			<input type="button" name="1" value="1" onclick="run1 ()"/>
+			<input type="button" name="2" value="2" onclick="run2 ()"/>
+			<input type="button" name="3" value="3" onclick="run3 ()"/>
+			<input type="button" name="4" value="4" onclick="run4 ()"/>
+			<br>
+			<input type="button" name="5" value="5" onclick="run5 ()"/>
+			<input type="button" name="6" value="6" onclick="run6 ()"/>
+			<input type="button" name="7" value="7" onclick="run7 ()" />
+			<input type="button" name="8" value="8" onclick="run8 ()"/>
+			<br>
+			<input type="button" name="9" value="9" onclick="run9 ()"/>
+			<input type="button" name="0" value="0" onclick="run0 ()"/>
+			<input type="button" name="c" value="c" onclick="runclear ()"/>
+			<input type="button" name="cal" value="=" onclick="equal ()"/>
+			<br>
+			<input type="button" name="plus" value="+" onclick="runplus ()">
+			<input type="button" name="minus" value="-" onclick="runminus ()">
+			<input type="button" name="multiply" value="*" onclick="runmultiply ()">
+			<input type="button" name="share" value="/" onclick="runshare ()"> 
+		</form>
+	</div>
+</body>
+</html>
